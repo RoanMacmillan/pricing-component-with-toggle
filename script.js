@@ -6,14 +6,16 @@ const annually = document.querySelectorAll('.annual-price');
 
 
 
-document.getElementById('toggle-btn').addEventListener('click', function togglefunction(e) {
+document.getElementById('toggle-btn').addEventListener('change', function togglefunction(e) {
 
     if (e.target.checked) {
-        monthly.forEach(element => element.setAttribute('hidden', true));
-        annually.forEach(element => element.removeAttribute('hidden'));
-      } else {
-        monthly.forEach(element => element.removeAttribute('hidden'));
-        annually.forEach(element => element.setAttribute('hidden', true));
+        monthly.forEach(element => element.classList.toggle('add'));
+        annually.forEach(element => element.classList.toggle('remove'));
+    
+} else {
+
+        monthly.forEach(element => element.classList.toggle('add'));
+        annually.forEach(element => element.classList.toggle('remove'));
 
 }
 
